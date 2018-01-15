@@ -58,7 +58,8 @@ import org.bytedeco.javacpp.tools.InfoMapper;
     @Platform(value = "linux-x86",      preloadpath = {"/lib32/", "/lib/", "/usr/lib32/", "/usr/lib/", "/opt/intel/lib/ia32/", "/opt/intel/mkl/lib/ia32/"}),
     @Platform(value = "linux-x86_64",   preloadpath = {"/lib64/", "/lib/", "/usr/lib64/", "/usr/lib/", "/opt/intel/lib/intel64/", "/opt/intel/mkl/lib/intel64/"}),
     @Platform(value = "linux-ppc64",    preloadpath = {"/usr/lib/powerpc64-linux-gnu/", "/usr/lib/powerpc64le-linux-gnu/"}),
-    @Platform(value = "ios", define = {"IOS"}, include = {"cblas.h", "lapacke.h", "blas_extra.h"},
+    // @Platform(value = "ios", define = {"IOS"}, include = {"cblas.h", "blas_extra.h", "lapacke_mangling.h", "lapacke.h"},
+    @Platform(value = "ios", define = {"IOS"}, include = {"cblas.h", "clapack.h"},
            includepath = {"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator.sdk/System/Library/Frameworks/Accelerate.framework/Frameworks/vecLib.framework/Headers/","/Users/johan/ai/deeplearning4j/johan/libnd4j/include"})})
 public class openblas implements LoadEnabled, InfoMapper {
 
