@@ -15226,13 +15226,13 @@ introduced by G. Marsaglia and W. W. Tsang.
     specified type. In case of floating-point types, the returned value is
     from [0,1) range.
     */
-    public native @Name("operator uchar") byte asByte();
+    public native @Cast("uchar") @Name("operator uchar") byte asByte();
     /** \overload */
     /** \overload */
-    public native @Name("operator ushort") short asShort();
+    public native @Cast("ushort") @Name("operator ushort") short asShort();
     /** \overload */
     /** \overload */
-    public native @Name("operator unsigned") int asInt();
+    public native @Cast("unsigned") @Name("operator unsigned") int asInt();
     /** \overload */
     /** \overload */
     public native @Name("operator float") float asFloat();
@@ -18088,7 +18088,7 @@ public static final int
     public MatStep(@Cast("size_t") long s) { super((Pointer)null); allocate(s); }
     private native void allocate(@Cast("size_t") long s);
     public native @Cast("size_t*") @ByRef @Name("operator []") SizeTPointer get(int i);
-    public native @Name("operator size_t") long asLong();
+    public native @Cast("size_t") @Name("operator size_t") long asLong();
     public native @ByRef @Name("operator =") MatStep put(@Cast("size_t") long s);
 
     public native @Cast("size_t*") SizeTPointer p(); public native MatStep p(SizeTPointer p);
